@@ -10,7 +10,6 @@ namespace Advent_of_Code
             Console.WriteLine("*******Day 1 solution*******");
             day1.partOne();
             day1.partTwo();
-
             Console.WriteLine("----------------------------");
 
             Console.ReadLine();

@@ -12,4 +12,10 @@
     <Folder Include="Days\Input\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Days\Input\Day1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
