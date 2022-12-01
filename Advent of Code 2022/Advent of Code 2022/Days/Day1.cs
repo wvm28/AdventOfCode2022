@@ -39,6 +39,7 @@
                     currentElfCalories += i;
                 }
             });
+
             Console.WriteLine("The awnser to part 1 of day 1 = " + highestCalories);
         }
 
@@ -59,7 +60,9 @@
                     currentElfCalories += i;
                 }
             });
+
             elfCalories.Sort((x, y) => y.CompareTo(x));
+
             int combinedCalories = elfCalories[0] + elfCalories[1] + elfCalories[2];
             Console.WriteLine("The awnser to part 2 of day 1 = " + combinedCalories);
         }
