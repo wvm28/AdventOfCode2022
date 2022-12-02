@@ -12,6 +12,12 @@ namespace Advent_of_Code
             day1.partTwo();
             Console.WriteLine("----------------------------");
 
+            Day2 day2 = new Day2();
+            Console.WriteLine("*******Day 2 solution*******");
+            day2.partOne();
+            day2.partTwo();
+            Console.WriteLine("----------------------------");
+
             Console.ReadLine();
         }
     }
