@@ -19,7 +19,7 @@ namespace Advent_of_Code
             Console.WriteLine("----------------------------");
 
             Day03 day03 = new Day03();
-            Console.WriteLine("*******Day 2 solution*******");
+            Console.WriteLine("*******Day 3 solution*******");
             day03.partOne();
             day03.partTwo();
             Console.WriteLine("----------------------------");

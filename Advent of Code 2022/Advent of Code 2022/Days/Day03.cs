@@ -13,7 +13,7 @@
 
         public void partOne()
         {
-            var shit = 0;
+            var score = 0;
             _backpacks.ForEach(b =>
             {
                 var firstComponent = b.Substring(0, (b.Length / 2));
@@ -22,13 +22,12 @@
                 {
                     if (secondComponent.Contains(l))
                     {
-                        shit += (_score.IndexOf(l) + 1);
-                        Console.WriteLine(l + " - " + (_score.IndexOf(l) + 1));
+                        score += (_score.IndexOf(l) + 1);
                         break;
                     }
                 }
             });
-            Console.WriteLine("test: " + shit);
+            Console.WriteLine(score);
         }
 
         public void partTwo()
@@ -44,7 +43,6 @@
                     {
                         if (_backpacks[index + 1].Contains(l) && _backpacks[index + 2].Contains(l))
                         {
-                            Console.WriteLine("yay for group " + index + " with letter: " + l);
                             score += (_score.IndexOf(l) + 1);
                             break;
                         }
