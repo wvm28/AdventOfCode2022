@@ -9,14 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Days\Input\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Days\Input\Day1.txt">
+    <None Update="Days\Input\Day01.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Days\Input\Day2.txt">
+    <None Update="Days\Input\Day02.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Days\Input\Day03.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

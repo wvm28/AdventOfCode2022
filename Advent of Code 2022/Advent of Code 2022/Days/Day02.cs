@@ -1,11 +1,11 @@
 ﻿namespace Advent_of_Code_2022.Days
 {
-    class Day2
+    class Day02
     {
         private List<string[]> _rounds = new List<string[]>();
-        public Day2()
+        public Day02()
         {
-            foreach (string line in File.ReadAllLines(@"Days\Input\Day2.txt").ToList())
+            foreach (string line in File.ReadAllLines(@"Days\Input\Day02.txt").ToList())
             {
                 _rounds.Add(line.Split(null));
             }

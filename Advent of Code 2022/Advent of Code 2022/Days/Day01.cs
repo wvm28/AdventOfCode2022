@@ -1,13 +1,13 @@
 ﻿namespace Advent_of_Code_2022.Days
 {
-    class Day1
+    class Day01
     {
         private List<int> _elfCalories = new List<int>();
 
-        public Day1()
+        public Day01()
         {
             List<int> calories = new List<int>();
-            foreach (string line in File.ReadAllLines(@"Days\Input\Day1.txt").ToList())
+            foreach (string line in File.ReadAllLines(@"Days\Input\Day01.txt").ToList())
             {
                 if (String.IsNullOrEmpty(line)) calories.Add(0); else calories.Add(int.Parse(line));
             }

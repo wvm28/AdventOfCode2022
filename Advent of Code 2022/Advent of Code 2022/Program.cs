@@ -6,16 +6,22 @@ namespace Advent_of_Code
     {
         static void Main(string[] args)
         {
-            Day1 day1 = new Day1();
+            Day01 day01 = new Day01();
             Console.WriteLine("*******Day 1 solution*******");
-            day1.partOne();
-            day1.partTwo();
+            day01.partOne();
+            day01.partTwo();
             Console.WriteLine("----------------------------");
 
-            Day2 day2 = new Day2();
+            Day02 day02 = new Day02();
             Console.WriteLine("*******Day 2 solution*******");
-            day2.partOne();
-            day2.partTwo();
+            day02.partOne();
+            day02.partTwo();
+            Console.WriteLine("----------------------------");
+
+            Day03 day03 = new Day03();
+            Console.WriteLine("*******Day 2 solution*******");
+            day03.partOne();
+            day03.partTwo();
             Console.WriteLine("----------------------------");
 
             Console.ReadLine();
