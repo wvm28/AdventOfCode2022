@@ -31,7 +31,6 @@
                 pairs[0] = pair1;
                 pairs[1] = pair2;
                 _elvenPairs.Add(pairs);
-                Console.WriteLine(pairs[0][0] + " - " + pairs[0][1] + " --- " + pairs[1][0] + " - " + pairs[1][1]);
             });
 
         }
