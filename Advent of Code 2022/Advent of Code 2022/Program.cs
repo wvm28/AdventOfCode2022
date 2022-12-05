@@ -6,35 +6,37 @@ namespace Advent_of_Code
     {
         static void Main(string[] args)
         {
-            Day01 day01 = new Day01();
-            Console.WriteLine("*******Day 1 solution*******");
-            day01.partOne();
-            day01.partTwo();
-            Console.WriteLine("----------------------------");
+            var interfaceType = typeof(IDay);
+            var objects = AppDomain.CurrentDomain.GetAssemblies()
+                .SelectMany(s => s.GetTypes())
+                .Where(x => interfaceType.IsAssignableFrom(x) && !x.IsInterface && !x.IsAbstract)
+                .Select(x => Activator.CreateInstance(x));
 
-            Day02 day02 = new Day02();
-            Console.WriteLine("*******Day 2 solution*******");
-            day02.partOne();
-            day02.partTwo();
-            Console.WriteLine("----------------------------");
+            if (!objects.Any())
+            {
+                Console.WriteLine($"*************** No Code to run found ***************");
+                Console.WriteLine($"Make sure your classes use the '{interfaceType.Name}' interface!");
+            }
 
-            Day03 day03 = new Day03();
-            Console.WriteLine("*******Day 3 solution*******");
-            day03.partOne();
-            day03.partTwo();
-            Console.WriteLine("----------------------------");
 
-            Day04 day04 = new Day04();
-            Console.WriteLine("*******Day 4 solution*******");
-            day04.partOne();
-            day04.partTwo();
-            Console.WriteLine("----------------------------");
+            int i = 1;
+            foreach (IDay? instance in objects)
+            {
+                if (Object.ReferenceEquals(instance, null))
+                    continue;
 
-            Day05 day05 = new Day05();
-            Console.WriteLine("*******Day 5 solution*******");
-            day05.partOne();
-            day05.partTwo();
-            Console.WriteLine("----------------------------");
+                Console.WriteLine($"*************** Solutions Day {i} ***************");
+
+                Console.Write($"Solutions part one: ");
+                instance.partOne();
+
+
+                Console.Write($"Solutions part Two: ");
+                instance.partTwo();
+
+                Console.WriteLine();
+                i++;
+            }
 
             Console.ReadLine();
         }

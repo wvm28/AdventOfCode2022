@@ -1,6 +1,6 @@
 ﻿namespace Advent_of_Code_2022.Days
 {
-    class Day05
+    class Day05 : IDay
     {
 
         private List<Stack<char>> _crateStacks = new List<Stack<char>>();

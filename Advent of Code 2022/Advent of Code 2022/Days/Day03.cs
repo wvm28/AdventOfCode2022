@@ -1,6 +1,6 @@
 ﻿namespace Advent_of_Code_2022.Days
 {
-    class Day03
+    class Day03 : IDay
     {
         private List<string> _backpacks = new List<string>();
 
