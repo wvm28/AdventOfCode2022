@@ -21,7 +21,7 @@
         public int getLastIndexWithoutDuplicates(int amount)
         {
             Queue<char> previousChars = new Queue<char>();
-            int firstMarkerStart = 0;
+            int firstMarkerEnd = 0;
             for (int i = 0; i < _dataStream.Length; i++)
             {
                 if (i < amount)
@@ -33,12 +33,12 @@
                     previousChars.Enqueue(_dataStream[i]);
                     if (!previousChars.GroupBy(value => value).Any(@group => @group.Count() > 1))
                     {
-                        if (firstMarkerStart == 0) firstMarkerStart = (i + 1);
+                        if (firstMarkerEnd == 0) firstMarkerEnd = (i + 1);
                     };
                     previousChars.Dequeue();
                 }
             }
-            return firstMarkerStart;
+            return firstMarkerEnd;
         }
     }
 }
