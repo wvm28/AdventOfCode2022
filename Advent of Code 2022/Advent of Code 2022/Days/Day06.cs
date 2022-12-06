@@ -31,10 +31,7 @@
                 else
                 {
                     previousChars.Enqueue(_dataStream[i]);
-                    if (previousChars.GroupBy(value => value).Any(@group => @group.Count() > 1))
-                    {
-                    }
-                    else
+                    if (!previousChars.GroupBy(value => value).Any(@group => @group.Count() > 1))
                     {
                         if (firstMarkerStart == 0) firstMarkerStart = (i + 1);
                     };
