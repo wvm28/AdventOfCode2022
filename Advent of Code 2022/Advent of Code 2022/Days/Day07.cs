@@ -43,6 +43,8 @@
                         break;
                 }
             });
+            _directory.Display(0);
+
         }
 
         public void partOne()
@@ -82,7 +84,7 @@
         public int getLowerThanOrEqualToAmount(int amount)
         {
             int rtn = 0;
-            if (getSize() <= 100_000) rtn += getSize();
+            if (getSize() <= amount) rtn += getSize();
             Directories.ForEach(directory =>
             {
                 rtn += directory.getLowerThanOrEqualToAmount(amount);
