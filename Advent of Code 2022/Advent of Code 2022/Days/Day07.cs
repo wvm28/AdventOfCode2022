@@ -43,8 +43,6 @@
                         break;
                 }
             });
-            _directory.Display(0);
-
         }
 
         public void partOne()
